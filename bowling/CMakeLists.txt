@@ -13,6 +13,7 @@ set(EXECUTABLE_TEST_FILE ${PROJECT_NAME}-TestsExe)
 set(CALCULATOR_SOURCE_FILES
     DirectoryContent.cpp
     FlagTests.cpp
+    ScoreBoard.cpp
     )
 #cpp files for BowlingScoreCalculator-Tests compilation
 

@@ -3,6 +3,7 @@
 
 #include "../DirectoryContent.hpp"
 #include "../FlagTests.hpp"
+#include "../ScoreBoard.hpp"
 #include "catch.hpp"
 namespace fs = std::filesystem;
 
@@ -63,7 +64,7 @@ SCENARIO("ParsingFileContentAndCountingPoints") {
             {"lane2", {}},
             {"lane3", {{{"Michal"}, {167}}, {{"Radek"}, {90}}}}};
 
-        std::map<std::string, std::vector<std::pair<std::string, size_t>>> returnedScores = board.calculateScores(fileContent);
+        auto returnedScores = board.calculateScores(fileContent);
         WHEN("Parse files contents and return scores") {
             THEN("ScoreMapsShouldMatch") {
                 REQUIRE(returnedScores == expectedScores);
