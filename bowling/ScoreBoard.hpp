@@ -2,7 +2,9 @@
 #include <string>
 #include <vector>
 
+using mapOfScoresWithNames = std::map<std::string, std::vector<std::pair<std::string, size_t>>>;
+
 class ScoreBoard {
 public:
-    std::map<std::string, std::vector<std::pair<std::string, size_t>>> calculateScores(std::map<std::string, std::vector<std::string>> fileContent);
+    mapOfScoresWithNames calculateScores(std::map<std::string, std::vector<std::string>> fileContent);
 };
